@@ -18,9 +18,9 @@ A playful web app where developers paste code and get AI-generated roasts in sec
 - Backend: Express (TypeScript), sessions, Passport local auth
 - Extras: Tesseract.js (OCR), html2canvas (image export), qrcode (QR), PWA shell
 
-## Quickstart 
+## Deployed Link of the Project
 
-Link: 
+https://code-roast-club.netlify.app/
 
 ## API overview
 
@@ -58,18 +58,3 @@ Versioned aliases (for quick browser testing)
 ## Troubleshooting
 - If you see old UI after a rebuild, clear site data or unregister the service worker in DevTools → Application → Service Workers.
 - POST endpoints returning HTML usually means a SPA catch-all is intercepting requests; this server uses GET-only fallbacks to avoid that.
-
-# Code Roast Club
-
-A playful web app where developers paste code and get AI-generated roasts in seconds. Built with React + Tailwind on Vite, and an Express API that talks to OpenAI.
-
-## Features
-- Paste code and get 3–5 witty roast lines (Mild, Brutal, Dad Joke)
-- Personas: Linus Mode, HR-Safe, Gen Z Intern, Boomercoder
-- Usage limits (free) with a Pro upsell surface
-- Public Roast Wall and shareable roast detail pages
-- GitHub repo roasting and image (OCR) roasting available without a subscription
-
-## Quickstart
-
-Link: 
