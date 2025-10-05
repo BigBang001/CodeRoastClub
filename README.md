@@ -2,7 +2,7 @@
 
 Roast your code in seconds. Local-first, fast, and a little too honest.
 
-A playful web app where developers paste code and get AI-generated roasts in seconds. Built with React + Tailwind on Vite, and an Express API that talks to OpenAI.
+A playful web app where developers paste code and get AI-generated roasts in seconds. Built with React + Tailwind on Vite.
 
 
 ## Highlights
@@ -10,7 +10,6 @@ A playful web app where developers paste code and get AI-generated roasts in sec
 - GitHub repository roast and Image OCR roast — available to everyone
 - Public Roast Wall with shareable roast detail pages
 - Share features: copy to clipboard, save as image, and QR link
-- Optional OpenAI integration for richer roasts (set an API key to enable)
 - Session-based auth: register, login, and guest mode
 
 ## Tech stack
@@ -58,3 +57,4 @@ Versioned aliases (for quick browser testing)
 ## Troubleshooting
 - If you see old UI after a rebuild, clear site data or unregister the service worker in DevTools → Application → Service Workers.
 - POST endpoints returning HTML usually means a SPA catch-all is intercepting requests; this server uses GET-only fallbacks to avoid that.
+
