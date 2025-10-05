@@ -1,60 +1,74 @@
-# Code Roast Club
+# 🧑‍💻 Code Roast Club
 
-Roast your code in seconds. Local-first, fast, and a little too honest.
+> **Roast your code in seconds.** Local-first, fast, and a little *too* honest.
 
-A playful web app where developers paste code and get AI-generated roasts in seconds. Built with React + Tailwind on Vite.
+**Code Roast Club** is a playful, developer-first web app where programmers paste code and instantly receive witty, context-aware roast lines. It transforms debugging into an entertaining experience — the more your code hurts, the more it learns (and laughs).
 
+---
 
-## Highlights
-- Local-first roaster (no API key required) with multiple personas and modes (Mild, Brutal, Dad Joke)
-- GitHub repository roast and Image OCR roast — available to everyone
-- Public Roast Wall with shareable roast detail pages
-- Share features: copy to clipboard, save as image, and QR link
-- Session-based auth: register, login, and guest mode
+## 🚀 Highlights
 
-## Tech stack
-- Frontend: React 18 + Vite, Tailwind, shadcn/ui, Wouter, TanStack Query
-- Backend: Express (TypeScript), sessions, Passport local auth
-- Extras: Tesseract.js (OCR), html2canvas (image export), qrcode (QR), PWA shell
+* ⚡ **Local-first roast engine** — works without API keys or cloud dependencies
+* 🤖 **Multiple humor modes:** *Mild*, *Brutal*, and *Dad Joke*
+* 🎭 **Custom personas:** *Linus Mode*, *Gen Z Intern*, *Boomer Coder*, *HR-Safe*
+* 🧱 **Public Roast Wall** — discover and share the funniest burns
+* 📸 **Extra Features:** GitHub repo roast & Image OCR roast for screenshots
+* 🔗 **Share options:** Copy roast text, export as image, or generate QR link
+* 👤 **Session-based auth:** Register, log in, or roast anonymously as a guest
+* 🏆 **Gamified badges** (upcoming): Roast Rookie, Bug Slayer, Syntax Surgeon
 
-## Deployed Link of the Project
+---
 
-https://code-roast-club.netlify.app/
+## 🧠 Tech Stack
 
-## API overview
+**Frontend:**
 
-Roasting
-- POST /api/roast — generate a roast (rate-limited by IP)
-- POST /api/github-roast — quick roast for public GitHub repos (no tokens required)
+* React 18 + Vite
+* Tailwind CSS + shadcn/ui
+* Wouter (router) + TanStack Query (data fetching)
 
-Feed & stats
-- GET  /api/roasts/public?limit=10 — latest public roasts
-- GET  /api/roasts/:id — fetch a single public roast for sharing
-- GET  /api/stats — aggregate stats for UI
+**Backend:**
 
-Usage
-- GET  /api/usage — current usage for your IP
+* Express (TypeScript)
+* Lightweight local roast engine
+* Session-based Passport authentication
 
-Auth (session-backed)
-- POST /api/auth/register — create an account and start a session
-- POST /api/auth/login — sign in with username/password
-- GET  /api/auth/me — current session user
-- POST /api/auth/logout — end session
-- POST /api/auth/guest — start a temporary guest session
+**Extras:**
 
-Versioned aliases (for quick browser testing)
-- GET  /api/v1 — API index JSON
-- POST /api/v1/roast
-- POST /api/v1/roast/github
-- GET  /api/v1/roasts/public
-- GET  /api/v1/roasts/:id
+* Tesseract.js — OCR for code screenshots
+* html2canvas — Export roast results as images
+* qrcode — Generate shareable roast QR links
+  
+---
 
-## Project structure
-- client/ — React app (Wouter, TanStack Query, Tailwind)
-- server/ — Express server, routes, in-memory storage
-- shared/ — Zod/Drizzle schemas shared across client/server
+## 🌐 Live Demo
 
-## Troubleshooting
-- If you see old UI after a rebuild, clear site data or unregister the service worker in DevTools → Application → Service Workers.
-- POST endpoints returning HTML usually means a SPA catch-all is intercepting requests; this server uses GET-only fallbacks to avoid that.
+**[Deployed Project Link](#)** *https://code-roast-club.netlify.app/*
 
+---
+
+## 📁 Project Structure
+
+```
+client/   → React app (UI, routes, roast logic)
+server/   → Express backend (sessions, roast generation)
+shared/   → Shared Zod/Drizzle schemas for validation
+```
+
+---
+
+## 🧩 Troubleshooting
+
+* **Old UI after rebuild?**
+  Clear site data or unregister the service worker (DevTools → Application → Service Workers).
+
+* **POST endpoints returning HTML?**
+  SPA fallback is intercepting requests — this server uses GET-only fallbacks to avoid that issue.
+
+---
+
+## 💡 Hackathon Tagline
+
+> *“Where bad code meets brutal honesty — one roast at a time.”*
+
+---
